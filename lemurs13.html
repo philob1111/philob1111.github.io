@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Melbourne Zoo Male Ring-tailed Lemurs</title>
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/base/jquery-ui.css">
+    
+    <script>
+      var lemurs = [
+        {
+          name : "Cedric",
+          dob : "1997-09-08",
+          pob : "",
+          mother: "",
+          father: "", 
+          siblings: "David (half)",
+          eyes: "brown",
+          eyePatches : "medium",
+          teeth : "concealed",
+          noseBridge : "faint v",
+          brow : "fairly straight", 
+          ranking : "near bottom",
+          behaviour : "often appears cool and relaxed; outsider who is usually alone or with William; stink fights defensively", 
+          description : "very uniform nose outline",
+          pics : [
+            "Cedric/P1070935 (2).JPG",
+            "Cedric/P1050584 (2).JPG",
+            "Cedric/1_Cedric_headon.JPG",
+            "Cedric/1-Cedric-Right70.jpg",
+            "Cedric/P1050228 (2).JPG",
+          ]
+        },
+        {
+          name : "David",
+          dob : "1999-09-10",
+          pob : "",
+          mother: "",
+          father: "", 
+          siblings: "Cedric (half)",
+          eyes: "brown",
+          eyePatches : "large",
+          teeth : "concealed",
+          noseBridge : "V",
+          brow : "dips",
+          ranking : "middle to high", 
+          behaviour : "in main group; often seen with son Dikembe", 
+          description : "sagging jowls, sagging belly when walking",
+          pics : [
+            "David/2_David_LP (2).JPG",
+            "David/P1050621 (2).JPG",
+            "David/P1050648 (3).JPG",
+            "David/P1050647 (5).JPG",
+            "David/2-David-Right90.jpg",
+          ]
+        },
+        {
+          name : "Callum",
+          dob : "2001-09-05",
+          pob : "",
+          mother: "",
+          father: "", 
+          siblings: "Domino (half)",
+          eyes: "pale",
+          eyePatches : "large",
+          teeth : "concealed",
+          noseBridge : "v",
+          brow : "fairly straight",
+          ranking : "bottom", 
+          behaviour : "outsider who will never join the main group but it sometimes forms around him", 
+          description : "short tail (9 black stripes) with almost no white fur on the tip; two cuts in right ear",
+          pics : [
+            "Callum/P1050384 (2).JPG",
+            "Callum/lemur3_Callum2.jpg",
+            "Callum/P1050385 (2).JPG",
+            "Callum/lemur3_Callum_rs.jpg",
+            "Callum/3-Callum-Right90.JPG",
+          ]
+        },
+        {
+          name : "Domino",
+          dob : "2001-09-12",
+          pob : "",
+          mother: "",
+          father: "", 
+          siblings: "Callum (half)",
+          eyes: "brown",
+          eyePatches : "large",
+          teeth : "concealed",
+          noseBridge : "deep V",
+          brow : "fairly straight", 
+          ranking : "middle", 
+          behaviour : "outsider who is often alone; can be aggressive", 
+          description : "short tail (8 black stripes) with white fur on the tip; very deep V on nose bridge",
+          pics : [
+            "Domino/P1050668 (2).JPG",
+            "Domino/P1060179 (2).JPG",
+            "Domino/P1050405 (2).JPG",
+            "Domino/P1060311 (2).JPG",
+            "Domino/P1060306 (2).JPG",
+          ]
+        },
+        {
+          name : "William",
+          dob : "2002-09-15",
+          pob : "",
+          mother: "",
+          father: "", 
+          siblings: "",
+          eyes: "brown",
+          eyePatches : "medium",
+          teeth : "concealed",
+          noseBridge : "V",
+          brow : "fairly straight", 
+          ranking : "near bottom", 
+          behaviour : "outsider who is often alone or with Cedric; stink fights aggressively; often eats food when others are preoccupied", 
+          description : "short snout; cut in right ear",
+          pics : [
+            "William/P1040867 (2).JPG",
+            "William/P1050025 (2).JPG",
+            "William/P1040837 (2).JPG",
+            "William/lemur5_William_rs.jpg",
+            "William/P1070912 (2).JPG",
+          ]
+        },
+        {
+          name : "Shango",
+          dob : "2010-09-10",
+          pob : "Perth Zoo",
+          mother: "Zanaka",
+          father: "", 
+          siblings: "Mafana",
+          eyes: "reddy-brown",
+          eyePatches : "medium",
+          teeth : "concealed",
+          noseBridge : "V",
+          brow : "fairly straight",
+          ranking : "top",
+          behaviour : "chases outsiders from food and main group huddle", 
+          description : "black \"hook\" shape on right of snout; raised right lip; no upper right canine tooth",
+          pics : [
+            "Shango/P1060173 (2).JPG",
+            "Shango/P1050901 (2).JPG",
+            "Shango/P1060167 (2).JPG",
+            "Shango/P1050299 (3).JPG",
+            "Shango/P1080020 (3).JPG",
+          ]
+        },
+        {
+          name : "Mafana",
+          dob : "2011-09-17",
+          pob : "Perth Zoo",
+          mother: "Zanaka",
+          father: "", 
+          siblings: "Shango",
+          eyes: "brown",
+          eyePatches : "medium",
+          teeth : "prominant",
+          noseBridge : "V",
+          brow : "fairly straight",
+          ranking : "top", 
+          behaviour : "chases outsiders from food and main group huddle; often has his ears poking sideways", 
+          description : "dark lines from eyes to top of nose",
+          pics : [
+            "Mafana/P1040841 (2).JPG",
+            "Mafana/P1050047 (2).JPG",
+            "Mafana/P1050039 (2).JPG",
+            "Mafana/P1050436 (2).JPG",
+            "Mafana/P1070413 (2).JPG",
+          ]
+        },
+        {
+          name : "Richie",
+          dob : "2011-10-10",
+          pob : "Hamilton Zoo NZ",
+          mother: "Rachel",
+          father: "Bruce", 
+          siblings: "Rigby (twin)",
+          eyes: "reddy-brown",
+          eyePatches : "medium",
+          teeth : "concealed",
+          noseBridge : "flat",
+          brow : "fairly straight",
+          ranking : "near top", 
+          behaviour : "in main group", 
+          description : "nose bridge is flat across the top",
+          pics : [
+            "Richie/P1060116 (2).JPG",
+            "Richie/P1050656 (3).JPG",
+            "Richie/P1060112 (2).JPG",
+            "Richie/P1060111 (2).JPG",
+            "Richie/P1050535 (4).JPG",
+          ]
+        },
+        {
+          name : "Rigby",
+          dob : "2011-10-10",
+          pob : "Hamilton Zoo NZ",
+          mother: "Rachel",
+          father: "Bruce", 
+          siblings: "Richie (twin)",
+          eyes: "brown",
+          eyePatches : "small",
+          teeth : "showing",
+          noseBridge : "V",
+          brow : "dips at eyes", 
+          ranking : "low to middle", 
+          behaviour : "in main group",
+          description : "white line rises into grey brow; narrow nose bridge with lots of white",
+          pics : [
+            "Rigby/P1060156 (4).JPG",
+            "Rigby/P1060162 (2).JPG",
+            "Rigby/P1060158 (2).JPG",
+            "Rigby/P1050918 (3).JPG",
+            "Rigby/P1050606 (3).JPG",
+          ]
+        },
+        {
+          name : "Dikembe",
+          dob : "2012-11-15",
+          pob : "Melbourne Zoo",
+          mother: "Kely",
+          father: "David", 
+          siblings: "-",
+          eyes: "brown",
+          eyePatches : "medium",
+          teeth : "concealed",
+          noseBridge : "V",
+          brow : "rounded m", 
+          ranking : "near top", 
+          behaviour : "in main group; often found with dad David", 
+          description : "big white gap between eyes and brow",
+          pics : [
+            "Dikembe/P1070343 (4).JPG",
+            "Dikembe/P1070344 (3).JPG",
+            "Dikembe/11_Dikembe_headon.JPG",
+            "Dikembe/P1050971 (2).JPG",
+            "Dikembe/P1060007 (2).JPG", 
+          ]
+        }
+      ];
+
+      function getAge(d){
+        var ms_age = new Date().getTime() - new Date(d).getTime();
+        var f = 1000 * 60 * 60 * 24 * 365.25;
+        var age = (ms_age - ms_age % f) / f;
+        return age;
+      }
+      
+      function getAge2(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+      }
+          
+      function addLine(t){          
+        document.open();
+        document.write( t + "<br>");
+        document.close();
+      }
+      
+      function strong(s){
+        return "<strong>"+s+'<\/strong>';
+      }
+      
+      function formatDate(d){
+        var dd = new Date(d); 
+        var fd = dd.toString().replace(/\S+\s(\S+)\s(\d+)\s(\d+)\s.*/,'$2-$1-$3');        
+        return fd;
+      }
+      
+      /* $(function() { */
+/*      $(document).ready(function(){
+        $( "#sortable" ).sortable({
+          cursor: "move",
+          opacity: 1.0,
+          axis: "y",
+          revert : 200,
+          tolerance: "pointer"
+        });
+        $( "#sortable" ).disableSelection();
+      });
+*/    
+      document.write("<div id=\"sortable\">");
+      for (i = 0; i < lemurs.length; i++) {
+        lemur = lemurs[i];
+        document.write("<div id=\"row\" class=\"" + lemur.name + "\">");
+        for (j = lemur.pics.length -1; j >= 0; j--) {
+          document.write("<a href=\"" + lemur.pics[j] + "\">");
+//          document.write("<a href=\"#\" onClick=\"MyWindow=window.open('" + lemur.pics[j] + "','MyWindow',width=600,height=300); return false;\">");
+          document.write("<img src=\"" + lemur.pics[j] + "\" alt=\"" + lemur.name + j + "\">");
+          document.write("<\/a>");
+        }
+        document.write("<h3>" + lemur.name + "<\/h3>");
+        /* document.write(strong("born: ") + lemur.dob + " at " + lemur.pob + " to " + lemur.mother + " and " + lemur.father + "<br>"); */
+        document.write(strong("born: ") + formatDate(lemur.dob) + " (age " + getAge2(lemur.dob) + ")<br>");
+        if (lemur.pob != "") document.write(strong("at: ") + lemur.pob + "<br>");                  
+        if (lemur.mother != "") document.write(strong("mother: ") + lemur.mother + "<br>");
+        if (lemur.father != "") document.write(strong("father: ") + lemur.father + "<br>");
+        if (lemur.siblings != "") document.write(strong("siblings: ") + lemur.siblings + "<br>");
+        document.write("<br>");
+        document.write(strong("eyes: ") + lemur.eyes + "<br>");
+        document.write(strong("eye patches: ") + lemur.eyePatches + "<br>");
+        document.write(strong("nose bridge: ") + lemur.noseBridge + "<br>");
+        document.write(strong("brow: ") + lemur.brow + "<br>");
+        document.write(strong("teeth: ") + lemur.teeth + "<br>");
+        document.write("<br>");                               
+//        document.write(strong("ranking: ") + lemur.ranking + "<br>");
+        document.write("- " + lemur.description + "<br>");
+        document.write("- " + lemur.behaviour + "<br>");
+//        document.write("* " + lemur.description + "; " + lemur.behaviour + "<br>");
+        document.write("<\/div>");
+      }
+      document.write('<\/div>');
+
+    </script>
+
+    <style>
+      #row {
+        width: 100%;
+        height: auto;
+        padding-left: 0.3%;
+        border: 0px solid black;
+        margin: 2px;
+            
+        background-color: lightblue;
+
+        line-height: 0.9vw;
+        font-size: 0.8vw;
+        border-radius: 4px;   
+        display: inline-block;
+          
+      }
+      img {
+        height: auto;
+        width: 18%;
+        padding: 0;
+        border: 0px;
+        margin: 1px; 
+
+        border-radius: 4px;
+        float: right;
+      }
+    </style>
+
+  </head>
+  
+  <body bgcolor="white">
+  </body>  
+
+</html>
